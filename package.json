@@ -1,0 +1,49 @@
+{
+	"name": "simpo-server",
+	"version": "0.0.1",
+	"author": "Meni Edri",
+	"description": "",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "npx sequelize-cli db:migrate && cross-env NODE_ENV=production npm run build && cross-env NODE_ENV=production node ./public",
+		"dev": "sequelize db:migrate && nodemon -L ./src/index.js --ignore node_modules/ --exec \"cross-env NODE_ENV=development babel-node ./src/index.js \"",
+		"build": "npm run clean && npx babel ./src -s -d public",
+		"clean": "npx rimraf public/**/*",
+		"lint": "eslint --fix ./src",
+		"lint:fix": "eslint --fix ."
+	},
+	"engines": {
+		"node": ">=10.15.0",
+		"npm": ">=6.7.0"
+	},
+	"dependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.6.4",
+		"@babel/node": "^7.5.5",
+		"@babel/plugin-transform-runtime": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/register": "^7.5.5",
+		"@babel/runtime": "^7.6.3",
+		"babel-plugin-module-resolver": "^3.2.0",
+		"body-parser": "^1.18.3",
+		"compression": "^1.7.4",
+		"cors": "^2.8.5",
+		"express": "^4.16.4",
+		"helmet": "^3.20.0",
+		"json-stringify-safe": "^5.0.1",
+		"pg": "^7.12.0",
+		"pg-hstore": "^2.3.2",
+		"sequelize": "^5.11.0",
+		"winston": "^3.2.1"
+	},
+	"devDependencies": {
+		"cross-env": "^5.2.1",
+		"eslint": "^5.15.3",
+		"eslint-import-resolver-babel-module": "^5.1.2",
+		"eslint-plugin-import": "^2.18.2",
+		"nodemon": "^1.18.6",
+		"prettier": "1.16.4",
+		"rimraf": "^2.6.3",
+		"sequelize-cli": "^5.5.0"
+	}
+}

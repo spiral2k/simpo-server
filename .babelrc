@@ -1,0 +1,31 @@
+{
+	"presets": ["@babel/preset-env"],
+	"plugins": [
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"regenerator": true
+			}
+		],
+		"@babel/plugin-syntax-dynamic-import",
+		[
+			"module-resolver",
+			{
+				"root": ["./"],
+				"alias": {
+					"@root": ".",
+					"@src": "./src/",
+					"@api": "./src/api",
+					"@config": "./src/config",
+					"@constants": "./src/constants",
+					"@helpers": "./src/helpers",
+					"@middlewares": "./src/middlewares",
+					"@models": "./src/models",
+					"@schema": "./src/schema"
+				}
+			}
+		]
+	],
+	"sourceMaps": true,
+	"retainLines": true
+}
