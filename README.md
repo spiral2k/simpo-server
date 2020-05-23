@@ -1,7 +1,6 @@
 # Simpo (server)
 
-CRU project built with Node.js, Express & PostgreSQL from the ground up
-
+CRU project built with Node.js, Express & PostgreSQL
 ## Getting Started
 
 These instructions will get you a copy of the simpo-server up and running on your local machine for development and production purposes.
