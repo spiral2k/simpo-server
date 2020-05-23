@@ -1,9 +1,9 @@
 module.exports = {
 	development: {
-		username: 'meniedri',
+		username: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
-		database: 'simpo',
-		host: '0.0.0.0',
+		database: process.env.DB_NAME,
+		host: process.env.DB_HOSTNAME,
 		dialect: 'postgres'
 	},
 	integration: {
