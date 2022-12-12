@@ -28,7 +28,7 @@
 		"body-parser": "^1.18.3",
 		"compression": "^1.7.4",
 		"cors": "^2.8.5",
-		"express": "^4.16.4",
+		"express": "^4.17.3",
 		"helmet": "^3.20.0",
 		"json-stringify-safe": "^5.0.1",
 		"pg": "^7.12.0",
